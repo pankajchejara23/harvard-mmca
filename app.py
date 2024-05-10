@@ -1614,3 +1614,6 @@ def display_value(n_clicks, value, lg_metric, sm_metric, sm_outcome, lg_outcome)
     figure.update_layout(height=1100,
                          font_size=14)
     return figure
+
+if __name__ == '__main__':
+    app.run_server(debug=False)
