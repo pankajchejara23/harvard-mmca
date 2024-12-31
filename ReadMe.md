@@ -1,31 +1,62 @@
-![](figures/logo.png)
+# **Multimodal Collaboration Analytics**
 
-MMCA represents the field of multimodal collaboration analytics which utilizes different sensor technologies to gain insights into the group's behavior during group work to enhance the group's collaboration.
 
-We present the current state-of-the-art in MMCA with our extensive literature review of research studies published since 2000. The review offers insights into the current trends in MMCA, challenges faced by researchers, and research areas where more research efforts are needed. 
+This repository contains visualization codes developed in collaboration with Harvard University's Learning, Innovation, and Technology (LIT) Lab. The project focuses on Multimodal Collaboration Analytics (MMCA), utilizing various sensor technologies to gain insights into group behaviors during collaborative activities, aiming to enhance group collaboration.
 
-This repository primarily contains two main components
+## Overview
 
-* **MMCA Review library**: This library aims to allow easier access to our literature review dataset through Python. Additionally, the library also provides some utility functions, e.g., filtering papers based on a time interval, and plotting trends for different coded attributes of papers (e.g., metrics, outcomes). <br/> Read the documentation [here](https://github.com/hgse-schneider/mmca-visualizations/blob/main/MMCA_library.md) <br/><br/> Check some analysis examples [here](https://github.com/hgse-schneider/mmca-visualizations/blob/main/source_codes/Trends.ipynb)
+Multimodal Collaboration Analytics (MMCA) is an emerging field that leverages data from multiple sources—such as audio, video, physiological sensors, and digital interactions—to analyze and improve collaborative processes. In the past two decades, there has been an increasing number of research studies investigating collaboration using multimodal data. 
 
-* **Dashboard Generator**: The dashboard generator utilizes the MMCA review library and generates a web-based dashboard for the users. The dashboard allows users to explore the review dataset in terms of metric-outcome relationships, and filter papers as per their needs. <br/> Read [here](https://github.com/hgse-schneider/mmca-visualizations/blob/main/Dashboard.md) the steps to generate the dashboard
+A synthesis of all those studies is crucial for new researchers as well as experienced ones to have updated understanding of state-of-the-art.  This repository contains codes aim to provide 
 
-Copyright (c) 2024 [Learning, Innovation, and Technology Lab](https://lit.gse.harvard.edu/) at Harvard University, USA
+- **MMCA Review Library**: A Python library providing access to an extensive literature review dataset on MMCA studies published since 2000. It offers utility functions for filtering papers by time intervals and plotting trends for various coded attributes (e.g., metrics, outcomes).
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+- **Visualization Tools**: Code and resources for visualizing data related to MMCA, aiding in the analysis and interpretation of multimodal datasets.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+## Repository Structure
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+- `dataset/`: Contains datasets used for analysis and visualization.
+
+- `figures/`: Includes generated figures and visualizations.
+
+- `source_codes/`: Cotains the source code for data processing and visualization tools.
+
+- `src/`: Directory for render hosting. Live at: [https://harvard-mmca.onrender.com/](https://harvard-mmca.onrender.com/)
+
+- `app.py`: Main application file for deployment on render.
+
+- `requirements.txt`: List of Python dependencies required to run the code.
+
+- `Dashboard.md`: Documentation for the interactive dashboard included in the project.
+
+- `MMCA_library.md`: Documentation for the MMCA Review Library, including usage instructions.
+
+## Getting Started
+
+### Prerequisites
+
+Ensure you have Python installed (version 3.6 or higher). Install the required dependencies using:
+
+```bash
+pip install -r requirements.txt
+```
+
+### Usage
+
+* MMCA Review Library: Refer to [MMCA_library.md](https://github.com/pankajchejara23/harvard-mmca/blob/main/MMCA_library.md) for detailed instructions on accessing and utilizing the literature review dataset.
+
+* Visualization Dashboard: Execute the following command after installing the required pacakges.
+
+```bash
+cd source_codes
+python3 dashboard_mmca_cscw_v6.py
+```
+![](figures/visualizer.gif)
+
+### License
+
+This project is licensed under the MIT License. 
+
+### Acknowledgments
+
+This work was conducted in collaboration with **Harvard University's Learning, Innovation, and Technology (LIT) Lab**. Special thanks to [**Prof. Bertrand Schneider**](https://www.gse.harvard.edu/directory/faculty/bertrand-schneider) for his guidance and all researchers in the **MMCA community**.
